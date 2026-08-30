@@ -14,7 +14,7 @@ test("Tc for demo test", async()=>{
 
     await page.locator("//select[@id='ctl00_ContentPlaceHolder1_ddlState']").selectOption({label : "MAHARASHTRA"});
     await page.locator("//select[@id='ctl00_ContentPlaceHolder1_ddlDistrict']").selectOption({label : "-Select-"});
-
+    await page.waitForTimeout(1000);
     await page.locator("//input[@id='ctl00_ContentPlaceHolder1_txtEmail']").fill("amruta123@gmail.com");
     await page.locator("//input[@id='ctl00_ContentPlaceHolder1_txtMobileNum']").fill("12345678909");
     await page.locator("//input[@id='ctl00_ContentPlaceHolder1_rdoSociety']").click();
